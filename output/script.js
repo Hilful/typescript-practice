@@ -33,9 +33,32 @@
 //   console.log("Hello");
 // };
 // let myFunc: Function;
-const myFunc = (a, b, c = "true") => {
-    //optional parameters are defined with c?
-    //   return a + b;
-    console.log(`Hello ${a} ${b}`);
+// const myFunc = (a: string, b: string, c: string = "true") => {
+//   //optional parameters are defined with c?
+//   //   return a + b;
+//   console.log(`Hello ${a} ${b}`);
+// };
+// myFunc("1", "2");
+//Type Alias
+// type stringOrNum = string | number;
+// type userType = {
+//   name: string;
+//   age: number;
+// };
+// const userDetails = (id: stringOrNum, user: userType) => {
+//   console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
+// };
+// const sayHello = (user: userType) => {
+//   console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}`);
+// };
+//Function Signature Typescript
+let calculation;
+calculation = (a, b, c) => {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
 };
-myFunc("1", "2");
+console.log(calculation(5, 6, "minus"));
