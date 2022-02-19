@@ -107,7 +107,11 @@ function drawRectangle(options: RectangleOptions) {
   let width = options.width;
   let length = options.length;
 }
-drawRectangle({
+
+let threeDOptions = {
   width: 30,
   length: 20,
-});
+  height: 50,
+};
+
+drawRectangle(threeDOptions);
