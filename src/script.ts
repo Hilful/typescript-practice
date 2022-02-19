@@ -97,3 +97,17 @@ console.log(sakib.country);
 const players: Player[] = [];
 players.push(sakib);
 players.push(mashrafi);
+
+interface RectangleOptions {
+  width: number;
+  length: number;
+}
+
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
+}
+drawRectangle({
+  width: 30,
+  length: 20,
+});
