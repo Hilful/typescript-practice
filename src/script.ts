@@ -1,6 +1,3 @@
-import { Player } from "./classes/player.js";
-import { IsPlayer } from "./interfaces/IsPlayer.js";
-
 // // // console.log("Hello");
 // // const country = "I Love Bangladesh!!";
 // // console.log(country);
@@ -89,33 +86,48 @@ import { IsPlayer } from "./interfaces/IsPlayer.js";
 
 //Classes in Typescript
 
-const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
+// const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
 
-let sakib: IsPlayer;
-sakib = new Player("Sakib", 35, "Bangladesh");
+// let sakib: IsPlayer;
+// sakib = new Player("Sakib", 35, "Bangladesh");
 
-// sakib.country = "England";
+// // sakib.country = "England";
 
-console.log(sakib.country);
+// console.log(sakib.country);
 
-const players: IsPlayer[] = [];
-players.push(sakib);
-players.push(mashrafi);
+// const players: IsPlayer[] = [];
+// players.push(sakib);
+// players.push(mashrafi);
 
-interface RectangleOptions {
-  width: number;
-  length: number;
-}
+// interface RectangleOptions {
+//   width: number;
+//   length: number;
+// }
 
-function drawRectangle(options: RectangleOptions) {
-  let width = options.width;
-  let length = options.length;
-}
+// function drawRectangle(options: RectangleOptions) {
+//   let width = options.width;
+//   let length = options.length;
+// }
 
-let threeDOptions = {
-  width: 30,
-  length: 20,
-  height: 50,
+// let threeDOptions = {
+//   width: 30,
+//   length: 20,
+//   height: 50,
+// };
+
+// drawRectangle(threeDOptions);
+
+//Generics
+const addID = <T>(obj: T) => {
+  ///using <T> and T is what we call generic it is used to get defined object in the same form in which it is defined
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
 };
 
-drawRectangle(threeDOptions);
+let user = addID({
+  name: "Mashrafi",
+  age: 40,
+  country: "Bangladesh",
+});
+
+user.country;
