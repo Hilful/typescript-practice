@@ -118,16 +118,32 @@
 // drawRectangle(threeDOptions);
 
 //Generics
-const addID = <T>(obj: T) => {
-  ///using <T> and T is what we call generic it is used to get defined object in the same form in which it is defined
-  let id = Math.floor(Math.random() * 100);
-  return { ...obj, id };
+// const addID = <T extends object>(obj: T) => {
+//   ///using <T> and T is what we call generic it is used to get defined object in the same form in which it is defined
+//   let id = Math.floor(Math.random() * 100);
+//   return { ...obj, id };
+// };
+
+// let user = addID({
+//   name: "Mashrafi",
+//   age: 40,
+//   country: "Bangladesh",
+// });
+
+// user.country;
+
+//Interface with Generic
+interface APIResponse<T> {
+  status: number;
+  type: string;
+  data: T;
+}
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: "good",
+  data: {
+    name: "Test",
+    something: 300,
+  },
 };
-
-let user = addID({
-  name: "Mashrafi",
-  age: 40,
-  country: "Bangladesh",
-});
-
-user.country;
