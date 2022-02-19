@@ -32,6 +32,14 @@
 //   name: "Bangladesh",
 //   age: 45,
 // };
-const myFunc = () => {
-  console.log("Hello");
+// const myFunc = () => {
+//   console.log("Hello");
+// };
+// let myFunc: Function;
+const myFunc = (a: string, b: string, c: string = "true") => {
+  //optional parameters are defined with c?
+  return a + b;
+  //   console.log(`Hello ${a} ${b}`);
 };
+
+myFunc("1", "2");
