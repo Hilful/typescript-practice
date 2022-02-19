@@ -1,7 +1,8 @@
 export interface IsPlayer {
   name: string;
-  age: number;
-  country: string;
+
+  readonly country: string;
 
   play(): void;
+  getAge(): number;
 }
