@@ -18,17 +18,20 @@
 // a.push("this is a value")
 // let a : (string | number) [] = [];
 
-let a: any[] = [];
-a.push("Bangladesh");
-a.push(34);
-console.log(a);
+// let a: any[] = [];
+// a.push("Bangladesh");
+// a.push(34);
+// console.log(a);
 
-//object
-let b: {
-  name: any;
-  age: any;
-};
-b = {
-  name: "Bangladesh",
-  age: 45,
+// //object
+// let b: {
+//   name: any;
+//   age: any;
+// };
+// b = {
+//   name: "Bangladesh",
+//   age: 45,
+// };
+const myFunc = () => {
+  console.log("Hello");
 };
