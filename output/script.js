@@ -52,13 +52,43 @@
 //   console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}`);
 // };
 //Function Signature Typescript
-let calculation;
-calculation = (a, b, c) => {
-    if (c === "add") {
-        return a + b;
+// let userDetails: (
+//   x: number | string,
+//   userInfo: {
+//     name: string;
+//     age: number;
+//   }
+// ) => void;
+// // calculation = (a: number, b: number, c: string) => {
+// //   if (c === "add") {
+// //     return a + b;
+// //   } else {
+// //     return a - b;
+// //   }
+// // };
+// // console.log(calculation(5, 6, "minus"));
+// userDetails = (
+//   id: number | string,
+//   user: {
+//     name: string;
+//     age: number;
+//   }
+// ) => {};
+//Classes in Typescript
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
     }
-    else {
-        return a - b;
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`);
     }
-};
-console.log(calculation(5, 6, "minus"));
+}
+const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
+const sakib = new Player("Sakib", 40, "Bangladesh");
+sakib.country = "England";
+console.log(sakib.name);
+const players = [];
+players.push(sakib);
+players.push(mashrafi);

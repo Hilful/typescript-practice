@@ -87,9 +87,9 @@
 //Classes in Typescript
 
 class Player {
-  name: string;
-  age: number;
-  country: string;
+  private name: string;
+  public age: number;
+  readonly country: string;
 
   constructor(n: string, a: number, c: string) {
     this.name = n;
@@ -104,6 +104,9 @@ class Player {
 const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
 const sakib = new Player("Sakib", 40, "Bangladesh");
 
+sakib.country = "England";
+
+console.log(sakib.name);
 const players: Player[] = [];
 players.push(sakib);
 players.push(mashrafi);
