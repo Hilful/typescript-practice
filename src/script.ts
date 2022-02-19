@@ -1,4 +1,5 @@
 import { Player } from "./classes/player.js";
+import { IsPlayer } from "./interfaces/IsPlayer.js";
 
 // // // console.log("Hello");
 // // const country = "I Love Bangladesh!!";
@@ -89,12 +90,15 @@ import { Player } from "./classes/player.js";
 //Classes in Typescript
 
 const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
-const sakib = new Player("Sakib", 40, "Bangladesh");
+
+let sakib: IsPlayer;
+sakib = new Player("Sakib", 35, "Bangladesh");
 
 // sakib.country = "England";
 
 console.log(sakib.country);
-const players: Player[] = [];
+
+const players: IsPlayer[] = [];
 players.push(sakib);
 players.push(mashrafi);
 
