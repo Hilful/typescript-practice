@@ -174,4 +174,4 @@
 //Tuples
 
 let a = [3, "Hello", { p: 3 }];
-let b: [number, string, object] = [4, "world", { q: 2 }];
+let b: [number, string, object] = [4, "world", { q: 2 }]; //tuples is a type of array where order matters
