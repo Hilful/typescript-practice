@@ -36,10 +36,26 @@
 //   console.log("Hello");
 // };
 // let myFunc: Function;
-const myFunc = (a: string, b: string, c: string = "true") => {
-  //optional parameters are defined with c?
-  //   return a + b;
-  console.log(`Hello ${a} ${b}`);
+// const myFunc = (a: string, b: string, c: string = "true") => {
+//   //optional parameters are defined with c?
+//   //   return a + b;
+//   console.log(`Hello ${a} ${b}`);
+// };
+
+// myFunc("1", "2");
+
+type stringOrNum = string | number;
+
+const userDetails = (
+  id: stringOrNum,
+  user: {
+    name: string;
+    age: number;
+  }
+) => {
+  console.log(`User id is ${id}, name is ${user.name} and age is ${user.age}`);
 };
 
-myFunc("1", "2");
+const sayHello = (user: { name: string; age: number }) => {
+  console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."}`);
+};
