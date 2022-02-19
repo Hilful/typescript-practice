@@ -1,4 +1,4 @@
-"use strict";
+import { Player } from "./classes/player.js";
 // // // console.log("Hello");
 // // const country = "I Love Bangladesh!!";
 // // console.log(country);
@@ -75,20 +75,10 @@
 //   }
 // ) => {};
 //Classes in Typescript
-class Player {
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
-    play() {
-        console.log(`${this.name} from ${this.country} is playing`);
-    }
-}
 const mashrafi = new Player("Mashrafi", 40, "Bangladesh");
 const sakib = new Player("Sakib", 40, "Bangladesh");
-sakib.country = "England";
-console.log(sakib.name);
+// sakib.country = "England";
+console.log(sakib.country);
 const players = [];
 players.push(sakib);
 players.push(mashrafi);
